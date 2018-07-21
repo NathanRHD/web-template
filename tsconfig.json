@@ -7,7 +7,7 @@
         "outDir": "./distribution"
     },
     "files": [
-        "./source/client/components/shell.tsx",
-        "./source/server.ts"
+        "./source/client.tsx",
+        "./source/server.tsx"
     ]
 }
