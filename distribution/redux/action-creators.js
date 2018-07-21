@@ -4,7 +4,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.actionCreatorFactory = (type) => {
     return () => ({
         type,
-        typeRef: undefined,
         create: (body) => (Object.assign({ type }, body))
     });
 };

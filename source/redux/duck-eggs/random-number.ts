@@ -24,7 +24,7 @@ export const reducer = (state = null, action: DuckActionUnion) => {
     }
 }
 
-export function* getRandomNumberSaga(action: typeof getRandomNumber["typeRef"]) {
+export function* getRandomNumberSaga(action: ReturnType<typeof getRandomNumber.create>) {
     yield put(setRandomNumber.create({ payload: Math.random() }));
 }
   
