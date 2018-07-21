@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const duck_eggs_1 = require("./duck-eggs");
+const index_1 = require("./duck-eggs/index");
 const middlewares_1 = require("./middlewares");
 exports.runDuckEggSagas = duckEggs => {
     for (const key in duckEggs) {
@@ -12,6 +12,6 @@ exports.runDuckEggSagas = duckEggs => {
     }
 };
 exports.runAllDuckEggSagas = () => {
-    exports.runDuckEggSagas(duck_eggs_1.systemDuckEggs);
-    exports.runDuckEggSagas(duck_eggs_1.userDuckEggs);
+    exports.runDuckEggSagas(index_1.systemDuckEggs);
+    exports.runDuckEggSagas(index_1.userDuckEggs);
 };

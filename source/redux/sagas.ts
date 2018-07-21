@@ -1,4 +1,4 @@
-import { systemDuckEggs, userDuckEggs } from "./duck-eggs";
+import { systemDuckEggs, userDuckEggs } from "./duck-eggs/index";
 import { sagaMiddleware } from "./middlewares";
 
 export const runDuckEggSagas = duckEggs => {

@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const redux_1 = require("redux");
 const react_router_redux_1 = require("react-router-redux");
-const duck_eggs_1 = require("./duck-eggs");
+const index_1 = require("./duck-eggs/index");
 const reset_user_state_1 = require("./reset-user-state");
 const getDuckEggReducers = (duckEggs) => Object.keys(duckEggs).reduce((memo, key) => {
     const duckEgg = duckEggs[key];
@@ -11,7 +11,7 @@ const getDuckEggReducers = (duckEggs) => Object.keys(duckEggs).reduce((memo, key
 }, {});
 var User;
 (function (User) {
-    const reducers = getDuckEggReducers(duck_eggs_1.userDuckEggs);
+    const reducers = getDuckEggReducers(index_1.userDuckEggs);
     // Combines all your duck reducers into a single reducer, wrapping it in the reset user state function
     User.reducer = (state, action) => {
         if (!Object.keys(reducers).length) {
@@ -24,7 +24,7 @@ var User;
 // The same as with user state, without reverting state on logout
 var System;
 (function (System) {
-    const reducers = getDuckEggReducers(duck_eggs_1.systemDuckEggs);
+    const reducers = getDuckEggReducers(index_1.systemDuckEggs);
     System.reducer = (state, action) => {
         if (!Object.keys(reducers).length) {
             return ((s = {}, a) => s);

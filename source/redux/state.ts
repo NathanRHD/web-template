@@ -1,7 +1,7 @@
 import { Action, combineReducers, ReducersMapObject, AnyAction, Reducer } from "redux"
 import { routerReducer, RouterState } from "react-router-redux";
-import { systemDuckEggs, userDuckEggs } from "./duck-eggs"
-import { resetUserStateReducerFactory } from "./reset-user-state"
+import { systemDuckEggs, userDuckEggs } from "./duck-eggs/index";
+import { resetUserStateReducerFactory } from "./reset-user-state";
 
 const getDuckEggReducers = <S>(duckEggs) => Object.keys(duckEggs).reduce(
   (memo, key) => {
