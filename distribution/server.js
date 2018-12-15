@@ -11,7 +11,7 @@ const state_1 = require("./redux/state");
 const middlewares_1 = require("./redux/middlewares");
 const initServer = () => {
     const server = express();
-    const port = process.env.PORT || 8080;
+    const port = process.env.PORT || 3000;
     server.use(express.static("static"));
     server.use("*", (req, res) => {
         const context = {};

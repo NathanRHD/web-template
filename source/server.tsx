@@ -13,7 +13,7 @@ import { getAppliedMiddleware } from "./redux/middlewares";
 const initServer = () => {
     const server = express()
 
-    const port = process.env.PORT || 8080
+    const port = process.env.PORT || 3000
 
     server.use(express.static("static"))
 

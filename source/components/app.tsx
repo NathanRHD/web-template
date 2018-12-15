@@ -8,21 +8,17 @@ import { Home } from "./views/home"
 import { Store } from "redux";
 import { State } from "../redux/state";
 
-export class App extends Component<{}, {}> {
-    render() {
-        return <>
-            <div className="header">
-                <h1>Header</h1>
-            </div>
-            <nav></nav>
-            <div className="page">
-                <Switch>
-                    <Route exact path="/" component={Home} />
-                </Switch>
-            </div>
-            <div className="footer">
-                <p>Footer</p>
-            </div>
-        </>
-    }
-}
+export const App = (props: {}) => <>
+    <div className="header">
+        <h1>Header</h1>
+    </div>
+    <nav></nav>
+    <div className="page">
+        <Switch>
+            <Route exact path="/" component={Home} />
+        </Switch>
+    </div>
+    <div className="footer">
+        <p>Footer</p>
+    </div>
+</>
